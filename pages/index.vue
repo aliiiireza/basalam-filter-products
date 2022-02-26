@@ -1,23 +1,18 @@
 <template>
   <div class="row mt-4">
     <div class="col-3">
-      <filter-products />
+      <FilterProducts />
     </div>
     <div class="col-9">
-      <sort-products />
-      <products />
+      <SortProducts />
+      <Products />
     </div>
   </div>
 </template>
 
 <script>
-import SortProducts from '@/components/SortProducts/SortProducts'
-import FilterProducts from '@/components/FilterProducts/FilterProducts'
-import Products from '@/components/Products/Products'
-
 export default {
   name: 'Home',
-  components: { Products, SortProducts, FilterProducts },
   head() {
     return {
       link: [{ rel: 'canonical', href: 'https://basalam.com/' }],
