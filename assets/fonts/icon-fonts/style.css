@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?7mty0i');
+  src:  url('fonts/icomoon.eot?7mty0i#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7mty0i') format('truetype'),
+    url('fonts/icomoon.woff?7mty0i') format('woff'),
+    url('fonts/icomoon.svg?7mty0i#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="mi-"], [class*=" mi-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mi-clipboard:before {
+  content: "\e91d";
+}
+.mi-logout:before {
+  content: "\e91e";
+}
+.mi-copy:before {
+  content: "\e91f";
+}
+.mi-whatsapp:before {
+  content: "\e920";
+  color: #6a1b9a;
+}
+.mi-twitter:before {
+  content: "\e921";
+  color: #6a1b9a;
+}
+.mi-instagram:before {
+  content: "\e922";
+  color: #6a1b9a;
+}
+.mi-facebook:before {
+  content: "\e923";
+  color: #6a1b9a;
+}
+.mi-telegram:before {
+  content: "\e924";
+  color: #6a1b9a;
+}
+.mi-logo:before {
+  content: "\e91c";
+  color: #6a1b9a;
+}
+.mi-image-search:before {
+  content: "\e91b";
+}
+.mi-trash:before {
+  content: "\e919";
+}
+.mi-watch:before {
+  content: "\e91a";
+}
+.mi-login:before {
+  content: "\e917";
+}
+.mi-collection:before {
+  content: "\e918";
+  color: #8012c3;
+}
+.mi-image-upload:before {
+  content: "\e916";
+}
+.mi-basalam:before {
+  content: "\e910";
+}
+.mi-angle-up:before {
+  content: "\e912";
+}
+.mi-angle-down:before {
+  content: "\e913";
+}
+.mi-angle-left:before {
+  content: "\e914";
+}
+.mi-angle-right:before {
+  content: "\e915";
+}
+.mi-comment:before {
+  content: "\e900";
+}
+.mi-add-bordered:before {
+  content: "\e90d";
+  color: #4f4f4f;
+}
+.mi-close:before {
+  content: "\e90c";
+}
+.mi-comment-fill:before {
+  content: "\e901";
+}
+.mi-tick:before {
+  content: "\e902";
+}
+.mi-add:before {
+  content: "\e903";
+}
+.mi-more:before {
+  content: "\e904";
+}
+.mi-send:before {
+  content: "\e905";
+}
+.mi-home:before {
+  content: "\e906";
+}
+.mi-google:before {
+  content: "\e907";
+}
+.mi-share1:before {
+  content: "\e908";
+}
+.mi-angle-right2:before {
+  content: "\e909";
+}
+.mi-search:before {
+  content: "\e90a";
+}
+.mi-like:before {
+  content: "\e90b";
+}
+.mi-user:before {
+  content: "\e90e";
+}
+.mi-exit:before {
+  content: "\e90f";
+}
+.mi-edit:before {
+  content: "\e911";
+}

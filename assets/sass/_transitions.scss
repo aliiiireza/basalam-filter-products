@@ -1,0 +1,18 @@
+// fade transition for pages
+.page-enter-active,
+.page-leave-active {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+// bottom-sheet slide
+.slide-up-enter, .slide-up-leave-to {
+  transform: translateY(100%);
+}
+.slide-up-enter-active, .slide-up-leave-active {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

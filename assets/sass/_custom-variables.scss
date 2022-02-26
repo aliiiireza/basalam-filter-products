@@ -1,0 +1,102 @@
+// Color system
+$gray-100: #fafafa;
+$gray-200: #dfdfdf;
+$gray-300: #eeeeee !default;
+$gray-400: #f6f6f6;
+$gray-500: #bdbdbd;
+$gray-600: #9d9d9d;
+$gray-700: #495057 !default;
+$gray-800: #535353;
+$gray-900: #85858585 !default;
+$gray-1000: #f5f5f5;
+
+$purple: #8012c3;
+
+$white: #ffffff;
+$black: #282828;
+$gray: #808184;
+$gray-mellow: #bdbdbd;
+$gray-light: #4f4f4f;
+$red: #d93a57;
+$red-light: #eb5757;
+$red-mellow: #e0e0e0;
+$yellow: #f5c51b;
+$orange: #d9791a;
+$green: #00cccc;
+$silver: #b2b5be;
+$natural-gray: #c4c4c4;
+
+$dark: $black;
+$primary: $purple;
+$secondary: $gray;
+$success: $green;
+$info: $blue-500;
+$warning: $orange;
+$danger: $red;
+$light: $gray-200;
+$link: $blue;
+
+$text-light: $gray-500;
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'dark': $dark,
+  'fade': $silver,
+  'link': $link,
+);
+
+// Body
+$body-bg: #fafafa;
+$body-color: $dark;
+
+// Fonts
+$font-family: 'IRANYekan', tahoma;
+
+// Font Sizes
+$font-size-2xs: 0.625rem;
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-2xl: 2rem;
+$font-size-3xl: 3rem;
+
+// Links
+$link-hover-decoration: none;
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xx: 1440px,
+) !default;
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xx: 1400px,
+);
+
+// Radius
+$round-xxs: 10px;
+$round-xs: 12px;
+$round-sm: 15px;
+$round: 0.25rem;
+$round-lg: 0.3rem;
+$round-xl: 1.25rem;
+$round-2xlg: 0.625rem;
+$pill: 50px;
+$round-circle: 50px;

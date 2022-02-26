@@ -1,0 +1,30 @@
+.search-input {
+  flex: 1;
+  &__field {
+    display: flex;
+    height: 48px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 100px;
+    border: 1px solid #BDBDBD;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 5px 20px;
+    background-color: white;
+    input {
+      border: none;
+      flex: 1;
+      margin-left: 10px;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    i {
+      color: #7D7D7D;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

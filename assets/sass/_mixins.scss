@@ -1,0 +1,16 @@
+@mixin fixed_centered {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin flex_mode($flex-mode, $horizontal-alignment, $vertical-alignment) {
+  display: $flex-mode;
+  justify-content: $horizontal-alignment;
+  align-items: $vertical-alignment;
+}
+@mixin absolute_centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
