@@ -1,8 +1,8 @@
 <template>
   <div class="search-input">
     <div class="search-input__field">
-      <input placeholder="جست و جو">
-      <i class="mi mi-search"/>
+      <input placeholder="جست و جو" />
+      <i class="mi mi-search" />
     </div>
   </div>
 </template>
@@ -13,5 +13,5 @@ export default {
 }
 </script>
 <style lang="scss">
-@import "./SearchInput";
+@import './SearchInput';
 </style>

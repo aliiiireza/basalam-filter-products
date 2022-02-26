@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-9 top-header__right">
           <nuxt-link to="/" class="top-header__logo">
-            <img src="@/static/basalam-icon.png"/>
+            <img src="@/static/basalam-icon.png" />
           </nuxt-link>
           <search-input></search-input>
         </div>
@@ -17,19 +17,18 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
 
 <script>
-import SearchInput from "./SearchInput/SearchInput"
+import SearchInput from './SearchInput/SearchInput'
 
 export default {
   name: 'TopHeader',
   components: {
-    SearchInput
-  }
+    SearchInput,
+  },
 }
 </script>
 
