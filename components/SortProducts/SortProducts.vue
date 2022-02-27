@@ -3,8 +3,8 @@
     <div class="card-body">
       بر اساس
 
-      <div v-for="(item, index) in items">
-        {{ item.title }}
+      <div v-for="(item, index) in items" :key="index">
+        {{ item.name }}
       </div>
     </div>
   </div>
@@ -17,12 +17,45 @@ export default {
   data() {
     return {
       items: [
-        { title: 'مرتبط ترین' },
-        { title: 'پرفروش ترین' },
-        { title: 'بیشترین تخفیف' },
-        { title: 'ارزان ترین' },
-        { title: 'گران ترین' },
-        { title: 'جدید ترین' },
+        {
+          name: 'مرتبط‌ترین',
+          sort: null,
+        },
+        {
+          name: 'پرفروش‌ترین',
+          sort: {
+            field: 'salesCount',
+            dir: 'desc',
+          },
+        },
+        {
+          name: 'بیشترین تخفیف',
+          sort: {
+            field: 'maxDiscount',
+            dir: 'desc',
+          },
+        },
+        {
+          name: 'ارزان‌ترین',
+          sort: {
+            field: 'price',
+            dir: 'asc',
+          },
+        },
+        {
+          name: 'گران‌ترین',
+          sort: {
+            field: 'price',
+            dir: 'desc',
+          },
+        },
+        {
+          name: 'جدیدترین',
+          sort: {
+            field: 'id',
+            dir: 'desc',
+          },
+        },
       ],
     }
   },

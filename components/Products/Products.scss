@@ -4,6 +4,7 @@
     border-radius: 12px;
 
     padding: 2px;
+
     &__image {
       width: 100%;
       height: 256px;
@@ -13,9 +14,10 @@
       background-color: #dadada;
     }
 
-    &__content{
+    &__content {
       margin: 15px 7px;
     }
+
     &__title {
       color: #3E3E3E;
       font-size: 14px;
@@ -26,6 +28,14 @@
       margin-bottom: 10px;
       color: #7D7D7D;
       font-size: 12px;
+      font-weight: normal;
+      direction: rtl;
+      display: inline-flex;
+      align-items: center;
+      i {
+        margin: 0 5px;
+        font-size: 10px;
+      }
     }
 
     &__rating {
@@ -46,11 +56,43 @@
       }
     }
 
-    &__info{
-
+    &__info {
+      display: flex;
+      justify-content: space-between;
     }
 
-    &__price{
+    &__discount {
+      border-radius: 4px;
+      background-color: #FCECEF;
+      color: #DF3856;
+      font-size: 12px;
+      padding: 2px 4px;
+      height: 18px;
+    }
+
+    &__price {
+      margin-top: 10px;
+      font-weight: bold;
+      i {
+        margin-right: 5px;
+        font-size: 20px;
+        margin-top: 5px;
+      }
+
+      font-size: 17px;
+      color: #535353;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      &__primary {
+        color:#9D9D9D;
+        font-size: 14px;
+        text-decoration: line-through;
+        margin-left: 5px;
+        font-weight: normal;
+      }
     }
   }
 }
