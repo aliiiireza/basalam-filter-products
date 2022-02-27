@@ -2,7 +2,7 @@
   <div class="search-input">
     <div class="search-input__field">
       <input placeholder="جست و جو" />
-      <i class="mi mi-search" />
+      <i class="ic-search" />
     </div>
   </div>
 </template>

@@ -10,7 +10,7 @@
         </div>
         <div class="col-3 top-header__left">
           <div class="top-header__link">
-            <i class="mi mi-login">
+            <i class="ic-shopping-basket">
               <div class="badge">7</div>
             </i>
             سبد خرید
