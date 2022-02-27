@@ -10,7 +10,7 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "test": "jest",
-    "icon": "icon-font-generator assets/fonts/custom-icon/svg/*.svg -o assets/fonts/custom-icon -n custom-icons -p ic --height 400 --center --tag * --htmltp assets/fonts/custom-icon/template.hbs"
+    "icon": "icon-font-generator assets/fonts/icons/svg/*.svg -o assets/fonts/icons -n icons -p ic --height 400 --center --htmltp assets/fonts/icons/template.hbs"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.1",

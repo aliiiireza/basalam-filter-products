@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "icons";
+    src: url("./icons.eot?2dc087859a0b29855ae3f3b5f9c03d28?#iefix") format("embedded-opentype"),
+url("./icons.woff2?2dc087859a0b29855ae3f3b5f9c03d28") format("woff2"),
+url("./icons.woff?2dc087859a0b29855ae3f3b5f9c03d28") format("woff"),
+url("./icons.ttf?2dc087859a0b29855ae3f3b5f9c03d28") format("truetype"),
+url("./icons.svg?2dc087859a0b29855ae3f3b5f9c03d28#icons") format("svg");
+}
+
+i[class^="ic-"]:before, i[class*=" ic-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-arrow:before {
+    content: "\f101";
+}
+.ic-search:before {
+    content: "\f102";
+}
+.ic-shopping-basket:before {
+    content: "\f103";
+}
+.ic-star:before {
+    content: "\f104";
+}
+.ic-toman:before {
+    content: "\f105";
+}
