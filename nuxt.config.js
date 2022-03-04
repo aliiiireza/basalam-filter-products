@@ -35,4 +35,7 @@ export default {
       bgset: true,
     },
   },
+  proxy: [
+    ['/api', { target: 'https://search.basalam.com/ai-engine' }]
+  ]
 }

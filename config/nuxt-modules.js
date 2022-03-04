@@ -8,4 +8,6 @@ export default [
   'nuxt-clipboard2',
   '@nuxtjs/style-resources',
   '@nuxtjs/sentry',
+  '@nuxtjs/axios',
+  '@nuxtjs/proxy',
 ]
