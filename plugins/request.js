@@ -14,7 +14,7 @@ export default function request(app, inject, headers) {
     crossdomain: true,
     withCredentials: false,
     cancelToken: source.token,
-    baseURL: 'https://basalam.com/api/v1_0/',
+    baseURL: '',
   }
 
   const accessToken = app.$cookies.get('accessToken')
