@@ -1,3 +1,27 @@
 .sort-products {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  color: #7D7D7D;
+  font-weight: 300;
 
+  &__item{
+    padding: 7px 20px;
+    margin-right: 16px;
+    border: 1px solid #eeeeee;
+    border-radius: 100px;
+    color:#535353;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    &:hover{
+      background-color: #f6fffa;
+    }
+
+    &.active{
+      color:#00A175;
+      border-color: #71DCC7;
+      font-weight: normal;
+    }
+  }
 }

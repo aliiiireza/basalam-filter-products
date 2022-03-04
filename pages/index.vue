@@ -4,7 +4,7 @@
       <FilterProducts />
     </div>
     <div class="col-9">
-      <SortProducts />
+      <SortProducts :sort.sync="sort" />
       <Products />
     </div>
   </div>
@@ -13,6 +13,12 @@
 <script>
 export default {
   name: 'Home',
+  data() {
+    return {
+      sort: null,
+      filter: null,
+    }
+  },
   head() {
     return {
       link: [{ rel: 'canonical', href: 'https://basalam.com/' }],
@@ -33,6 +39,14 @@ export default {
         { hid: 'og:description', property: 'og:description', content: '' },
       ],
     }
+  },
+  methods: {
+    // handleSortChange(sort) {
+    //   this.sort = sort
+    // },
+    // handleFilterChange(filter) {
+    //   this.filter = filter
+    // },
   },
 }
 </script>

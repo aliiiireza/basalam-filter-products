@@ -1,10 +1,19 @@
 <template>
   <div class="card mb-3">
-    <div class="card-body">
-      بر اساس
-
-      <div v-for="(item, index) in items" :key="index">
-        {{ item.name }}
+    <div class="card-body p-3">
+      <div class="sort-products">
+        نمایش بر اساس:
+        <div
+          v-for="(item, index) in items"
+          :key="index"
+          :class="[
+            'sort-products__item',
+            JSON.stringify(sort) === JSON.stringify(item.sort) ? 'active' : '',
+          ]"
+          @click="handleClick(item.sort)"
+        >
+          {{ item.name }}
+        </div>
       </div>
     </div>
   </div>
@@ -13,7 +22,12 @@
 <script>
 export default {
   name: 'SortProducts',
-  props: ['value'],
+  props: {
+    sort: {
+      type: Object,
+      default: null,
+    },
+  },
   data() {
     return {
       items: [
@@ -58,6 +72,11 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    handleClick(sort) {
+      this.$emit('update:sort', sort)
+    },
   },
 }
 </script>
