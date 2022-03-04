@@ -7,7 +7,9 @@
 
     <div class="card mb-3">
       <div class="card-header">جستجوی دقیق تر</div>
-      <div class="card-body">بر اساس</div>
+      <div class="card-body p-3 pt-0 pb-1">
+        <named-tags v-model="filters.namedTags" />
+      </div>
     </div>
 
     <div class="card mb-3">
@@ -37,10 +39,13 @@
 </template>
 
 <script>
+import NamedTags from './NamedTags/NamedTags'
 import USwitch from '~/components/UiKit/USwitch/USwitch'
+
 export default {
   name: 'FilterProducts',
   components: {
+    NamedTags,
     USwitch,
   },
   props: {
@@ -56,7 +61,7 @@ export default {
         isExists: false, // فیلتر محصولات موجود
         isReady: false, //  فیلتر محصولات آماده ارسال
         hasDiscount: false, // فیلتر محصولات تخفیف‌دار
-        namedTags: [],
+        namedTags: [1368],
       },
     }
   },
