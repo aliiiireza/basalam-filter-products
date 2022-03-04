@@ -1,7 +1,9 @@
 {
     "arrow": "\\f101",
-    "search": "\\f102",
-    "shopping-basket": "\\f103",
-    "star": "\\f104",
-    "toman": "\\f105"
+    "checked": "\\f102",
+    "search": "\\f103",
+    "shopping-basket": "\\f104",
+    "star": "\\f105",
+    "toman": "\\f106",
+    "unchecked": "\\f107"
 }

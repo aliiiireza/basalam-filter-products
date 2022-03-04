@@ -1,0 +1,39 @@
+.u-checkbox {
+  position: relative;
+  padding-left: 35px;
+  margin: 20px 0;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &__checkmark{
+    color: #9D9D9D;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  &__input:checked ~ &__checkmark {
+    color: #00C09D;
+  }
+
+  &__label{
+    color: #7D7D7D;
+    font-size: 14px;
+  }
+
+}

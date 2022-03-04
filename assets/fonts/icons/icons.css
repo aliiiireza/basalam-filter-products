@@ -1,10 +1,10 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?2dc087859a0b29855ae3f3b5f9c03d28?#iefix") format("embedded-opentype"),
-url("./icons.woff2?2dc087859a0b29855ae3f3b5f9c03d28") format("woff2"),
-url("./icons.woff?2dc087859a0b29855ae3f3b5f9c03d28") format("woff"),
-url("./icons.ttf?2dc087859a0b29855ae3f3b5f9c03d28") format("truetype"),
-url("./icons.svg?2dc087859a0b29855ae3f3b5f9c03d28#icons") format("svg");
+    src: url("./icons.eot?eedead5844a638df251dadcf2ab8f47a?#iefix") format("embedded-opentype"),
+url("./icons.woff2?eedead5844a638df251dadcf2ab8f47a") format("woff2"),
+url("./icons.woff?eedead5844a638df251dadcf2ab8f47a") format("woff"),
+url("./icons.ttf?eedead5844a638df251dadcf2ab8f47a") format("truetype"),
+url("./icons.svg?eedead5844a638df251dadcf2ab8f47a#icons") format("svg");
 }
 
 i[class^="ic-"]:before, i[class*=" ic-"]:before {
@@ -21,15 +21,21 @@ i[class^="ic-"]:before, i[class*=" ic-"]:before {
 .ic-arrow:before {
     content: "\f101";
 }
-.ic-search:before {
+.ic-checked:before {
     content: "\f102";
 }
-.ic-shopping-basket:before {
+.ic-search:before {
     content: "\f103";
 }
-.ic-star:before {
+.ic-shopping-basket:before {
     content: "\f104";
 }
-.ic-toman:before {
+.ic-star:before {
     content: "\f105";
+}
+.ic-toman:before {
+    content: "\f106";
+}
+.ic-unchecked:before {
+    content: "\f107";
 }
