@@ -72,7 +72,7 @@ export default {
     getProducts() {
       const url = '/api/v2.0/product/search'
       return this.request(url, 'post', {
-        q: this.payload.keyword,
+        q: this.payload.keyword !== undefined ? this.payload.keyword : '',
         from: this.from,
         size: this.size,
         ...this.payload,

@@ -2,7 +2,7 @@
   <div class="search-input">
     <div class="search-input__field">
       <input v-model="keyword" placeholder="جست و جو" @keyup.enter="search" />
-      <i class="ic-search" />
+      <i class="ic-search" @click="search" />
     </div>
   </div>
 </template>
@@ -25,8 +25,7 @@ export default {
   created() {},
   methods: {
     search() {
-      if (this.keyword !== '')
-        this.$router.push({ name: 'index', query: { q: this.keyword } })
+      this.$router.push({ name: 'index', query: { q: this.keyword } })
     },
   },
 }
