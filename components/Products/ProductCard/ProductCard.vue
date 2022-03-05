@@ -1,5 +1,5 @@
 <template>
-  <div class="col-3 mb-3">
+  <div class="col col-lg-3 col-xs-12 mb-3">
     <div class="product-card">
       <img class="product-card__image" :src="product.photo.SMALL" />
       <div class="product-card__content">

@@ -6,6 +6,11 @@
   color: #7D7D7D;
   font-weight: 300;
 
+  @include media-breakpoint-down(sm) {
+    overflow-x:scroll;
+    overflow-y:hidden;
+  }
+
   &__item{
     padding: 7px 20px;
     margin-right: 16px;

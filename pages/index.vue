@@ -1,9 +1,9 @@
 <template>
   <div class="row mt-4">
-    <div class="col-3">
+    <div class="col col-lg-3 col-xs-12">
       <FiltersProducts v-model="payload.filters" :keyword="payload.keyword" />
     </div>
-    <div class="col-9">
+    <div class="col col-lg-9 col-xs-12">
       <SortProducts v-model="payload.sort" />
       <Products :payload="payload" />
     </div>

@@ -8,6 +8,9 @@ body {
   direction: rtl;
   text-align: right;
   background-color: $white;
+  @include media-breakpoint-down(md) {
+   padding-top: 50px;
+  }
 }
 
 .card{
