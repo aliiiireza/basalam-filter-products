@@ -1,10 +1,10 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?eedead5844a638df251dadcf2ab8f47a?#iefix") format("embedded-opentype"),
-url("./icons.woff2?eedead5844a638df251dadcf2ab8f47a") format("woff2"),
-url("./icons.woff?eedead5844a638df251dadcf2ab8f47a") format("woff"),
-url("./icons.ttf?eedead5844a638df251dadcf2ab8f47a") format("truetype"),
-url("./icons.svg?eedead5844a638df251dadcf2ab8f47a#icons") format("svg");
+    src: url("./icons.eot?4216334f4a82de8b38797f6cc43810ce?#iefix") format("embedded-opentype"),
+url("./icons.woff2?4216334f4a82de8b38797f6cc43810ce") format("woff2"),
+url("./icons.woff?4216334f4a82de8b38797f6cc43810ce") format("woff"),
+url("./icons.ttf?4216334f4a82de8b38797f6cc43810ce") format("truetype"),
+url("./icons.svg?4216334f4a82de8b38797f6cc43810ce#icons") format("svg");
 }
 
 i[class^="ic-"]:before, i[class*=" ic-"]:before {
@@ -24,18 +24,21 @@ i[class^="ic-"]:before, i[class*=" ic-"]:before {
 .ic-checked:before {
     content: "\f102";
 }
-.ic-search:before {
+.ic-close-circle:before {
     content: "\f103";
 }
-.ic-shopping-basket:before {
+.ic-search:before {
     content: "\f104";
 }
-.ic-star:before {
+.ic-shopping-basket:before {
     content: "\f105";
 }
-.ic-toman:before {
+.ic-star:before {
     content: "\f106";
 }
-.ic-unchecked:before {
+.ic-toman:before {
     content: "\f107";
+}
+.ic-unchecked:before {
+    content: "\f108";
 }

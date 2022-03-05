@@ -8,7 +8,9 @@
           :key="index"
           :class="[
             'sort-products__item',
-            JSON.stringify(sort) === JSON.stringify(item.sort) ? 'active' : '',
+            JSON.stringify(selfValue) === JSON.stringify(item.sort)
+              ? 'active'
+              : '',
           ]"
           @click="handleClick(item.sort)"
         >
@@ -20,14 +22,10 @@
 </template>
 
 <script>
+import modelMixin from '@/mixins/model'
 export default {
   name: 'SortProducts',
-  props: {
-    sort: {
-      type: Object,
-      default: null,
-    },
-  },
+  mixins: [modelMixin],
   data() {
     return {
       items: [
@@ -75,7 +73,7 @@ export default {
   },
   methods: {
     handleClick(sort) {
-      this.$emit('update:sort', sort)
+      this.selfValue = sort
     },
   },
 }

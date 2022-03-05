@@ -14,28 +14,14 @@
 </template>
 
 <script>
+import modelMixin from '@/mixins/model'
 export default {
   name: 'USwitch',
+  mixins: [modelMixin],
   props: {
-    value: {
-      type: Boolean,
-      default: false,
-    },
     label: {
       type: String,
       default: '',
-    },
-  },
-  data() {
-    return {
-      selfValue: this.value,
-    }
-  },
-  watch: {
-    selfValue: {
-      handler(value) {
-        this.$emit('input', value)
-      },
     },
   },
 }

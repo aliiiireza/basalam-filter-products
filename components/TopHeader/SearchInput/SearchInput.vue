@@ -1,7 +1,7 @@
 <template>
   <div class="search-input">
     <div class="search-input__field">
-      <input placeholder="جست و جو" />
+      <input v-model="keyword" placeholder="جست و جو" @keyup.enter="search" />
       <i class="ic-search" />
     </div>
   </div>
@@ -10,6 +10,25 @@
 <script>
 export default {
   name: 'SearchInput',
+  data() {
+    return {
+      keyword: '',
+    }
+  },
+  watch: {
+    '$route.query': {
+      handler(query) {
+        if (query.q) this.keyword = query.q
+      },
+    },
+  },
+  created() {},
+  methods: {
+    search() {
+      if (this.keyword !== '')
+        this.$router.push({ name: 'index', query: { q: this.keyword } })
+    },
+  },
 }
 </script>
 <style lang="scss">

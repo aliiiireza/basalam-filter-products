@@ -17,22 +17,19 @@
             ( {{ product.rating.count }} نظر )
           </div>
 
-          <span
-            v-if="product.primaryPrice != 0"
-            class="product-card__discount"
-          >
+          <span v-if="product.primaryPrice != 0" class="product-card__discount">
             %{{ product.price | percent(product.primaryPrice) }}
           </span>
         </div>
 
         <div class="product-card__price">
           <i class="ic-toman" />
-          {{ product.price | price }}
+          {{ (product.price / 10) | price }}
           <div
             v-if="product.primaryPrice != 0"
             class="product-card__price__primary"
           >
-            {{ product.primaryPrice | price }}
+            {{ (product.primaryPrice / 10) | price }}
           </div>
         </div>
       </div>

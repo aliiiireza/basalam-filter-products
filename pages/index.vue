@@ -1,22 +1,33 @@
 <template>
   <div class="row mt-4">
     <div class="col-3">
-      <FilterProducts />
+      <FiltersProducts v-model="payload.filters" :keyword="payload.keyword" />
     </div>
     <div class="col-9">
-      <SortProducts :sort.sync="sort" />
-      <Products />
+      <SortProducts v-model="payload.sort" />
+      <Products :payload="payload" />
     </div>
   </div>
 </template>
 
 <script>
+import payloadToQueryMapper from '@/mappers/payloadToQuery'
+import queryToPayloadMapper from '@/mappers/queryToPayload'
 export default {
   name: 'Home',
   data() {
     return {
-      sort: null,
-      filter: null,
+      payload: {
+        keyword: '',
+        sort: null,
+        filters: {
+          freeShipping: false,
+          isExists: false,
+          isReady: false,
+          hasDiscount: false,
+          namedTags: [],
+        },
+      },
     }
   },
   head() {
@@ -40,13 +51,26 @@ export default {
       ],
     }
   },
+  watch: {
+    payload: {
+      deep: true,
+      handler: 'onPayloadChange',
+    },
+    '$route.query': {
+      immediate: true,
+      handler: 'onRouteChange',
+    },
+  },
   methods: {
-    // handleSortChange(sort) {
-    //   this.sort = sort
-    // },
-    // handleFilterChange(filter) {
-    //   this.filter = filter
-    // },
+    onRouteChange(query) {
+      this.payload = queryToPayloadMapper(query)
+    },
+    onPayloadChange(payload) {
+      this.$router.push({
+        path: this.$route.path,
+        query: payloadToQueryMapper(payload),
+      })
+    },
   },
 }
 </script>
