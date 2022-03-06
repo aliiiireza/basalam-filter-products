@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <infinite-loading @infinite="infiniteHandle" />
+    <infinite-loading v-if="products.length !== 0" @infinite="infiniteHandle" />
   </div>
 </template>
 
@@ -67,6 +67,9 @@ export default {
         }, 300)
       },
     },
+  },
+  created() {
+    this.$fetch()
   },
   methods: {
     getProducts() {
