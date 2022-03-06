@@ -93,7 +93,7 @@ export default {
     async infiniteHandle($state) {
       this.from += this.size
       const { products } = await this.getProducts()
-      this.products = [...this.products, ...products]
+      this.products.push(...products)
       if (products.length === 0) $state.complete()
       else $state.loaded()
     },
