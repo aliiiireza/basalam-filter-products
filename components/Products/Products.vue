@@ -13,8 +13,9 @@
         </div>
       </div>
     </div>
-
-    <infinite-loading v-if="products.length !== 0" @infinite="infiniteHandle" />
+    <client-only>
+      <infinite-loading @infinite="infiniteHandle" />
+    </client-only>
   </div>
 </template>
 
