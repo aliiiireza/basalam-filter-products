@@ -1,9 +1,9 @@
 export function convertToEnDigit(str) {
   const type = typeof str
 
-  if (type != 'string' && type != 'number') return str
+  if (type !== 'string' && type !== 'number') return str
 
-  if (type == 'number') str += ''
+  if (type === 'number') str += ''
 
   return str
     .replace(/۰/g, '0')
@@ -26,4 +26,8 @@ export function convertToEnDigit(str) {
     .replace(/٧/g, '7')
     .replace(/٨/g, '8')
     .replace(/٩/g, '9')
+}
+
+export function clone(source) {
+  return JSON.parse(JSON.stringify(source))
 }

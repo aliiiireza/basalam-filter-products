@@ -11,23 +11,14 @@
 </template>
 
 <script>
+import { clone } from '@/utils/utilities'
 import payloadToQueryMapper from '@/mappers/payloadToQuery'
-import queryToPayloadMapper from '@/mappers/queryToPayload'
+import queryToPayloadMapper, { defaultPayload } from '@/mappers/queryToPayload'
 export default {
   name: 'Home',
   data() {
     return {
-      payload: {
-        keyword: '',
-        sort: null,
-        filters: {
-          freeShipping: false,
-          isExists: false,
-          isReady: false,
-          hasDiscount: false,
-          namedTags: [],
-        },
-      },
+      payload: clone(defaultPayload),
     }
   },
   head() {
@@ -54,22 +45,18 @@ export default {
   watch: {
     payload: {
       deep: true,
-      handler: 'onPayloadChange',
+      handler(payload) {
+        this.$router.push({
+          path: this.$route.path,
+          query: payloadToQueryMapper(payload),
+        })
+      },
     },
     '$route.query': {
       immediate: true,
-      handler: 'onRouteChange',
-    },
-  },
-  methods: {
-    onRouteChange(query) {
-      this.payload = queryToPayloadMapper(query)
-    },
-    onPayloadChange(payload) {
-      this.$router.push({
-        path: this.$route.path,
-        query: payloadToQueryMapper(payload),
-      })
+      handler(query) {
+        this.payload = queryToPayloadMapper(query)
+      },
     },
   },
 }

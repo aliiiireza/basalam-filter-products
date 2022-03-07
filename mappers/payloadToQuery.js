@@ -1,24 +1,22 @@
 export default function payloadToQueryMapper(payload) {
-  // Keyword
-  const query = {
-    q: payload.keyword,
+  const { keyword, sort, filters } = payload
+
+  const query = {}
+
+  query.q = keyword
+
+  if (sort !== null) {
+    query.sortBy = sort.field
+    query.sortDir = sort.dir
   }
 
-  // Sort
-  if (payload.sort !== null) {
-    query.sortBy = payload.sort.field
-    query.sortDir = payload.sort.dir
+  if (filters.freeShipping) query.freeShipping = filters.freeShipping
+  if (filters.isExists) query.isExists = filters.isExists
+  if (filters.isReady) query.isReady = filters.isReady
+  if (filters.hasDiscount) query.hasDiscount = filters.hasDiscount
+  if (filters.namedTags.length > 0) {
+    query.namedTags = filters.namedTags.join(',')
   }
-
-  // Filters
-  if (payload.filters.freeShipping)
-    query.freeShipping = payload.filters.freeShipping
-  if (payload.filters.isExists) query.isExists = payload.filters.isExists
-  if (payload.filters.isReady) query.isReady = payload.filters.isReady
-  if (payload.filters.hasDiscount)
-    query.hasDiscount = payload.filters.hasDiscount
-  if (payload.filters.namedTags.length > 0)
-    query.namedTags = payload.filters.namedTags.join(',')
 
   return query
 }

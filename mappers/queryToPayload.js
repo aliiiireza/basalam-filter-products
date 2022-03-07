@@ -1,36 +1,43 @@
+import { clone } from '@/utils/utilities'
+
 export default function queryToPayloadMapper(query) {
-  const payload = {
-    keyword: '',
-    sort: null,
-    filters: {
-      freeShipping: false,
-      isExists: false,
-      isReady: false,
-      hasDiscount: false,
-      namedTags: [],
-    },
-  }
+  const payload = clone(defaultPayload)
 
-  // Keyword
-  payload.keyword = query.q
+  let { keyword, sort } = payload
+  const { filters } = payload
 
-  // Sort
+  keyword = query.q || ''
+
   if (query.sortBy && query.sortDir) {
-    payload.sort = {
+    sort = {
       field: query.sortBy,
       dir: query.sortDir,
     }
   }
 
-  // Filters
-  if (query.freeShipping) payload.filters.freeShipping = !!query.freeShipping
-  if (query.isExists) payload.filters.isExists = !!query.isExists
-  if (query.isReady) payload.filters.isReady = !!query.isReady
-  if (query.hasDiscount) payload.filters.hasDiscount = !!query.hasDiscount
-  if (query.namedTags)
-    payload.filters.namedTags = query.namedTags
-      .split(',')
-      .map((item) => parseInt(item))
+  if (query.freeShipping) filters.freeShipping = !!query.freeShipping
+  if (query.isExists) filters.isExists = !!query.isExists
+  if (query.isReady) filters.isReady = !!query.isReady
+  if (query.hasDiscount) filters.hasDiscount = !!query.hasDiscount
+  if (query.namedTags) {
+    filters.namedTags = query.namedTags.split(',').map((item) => parseInt(item))
+  }
 
-  return payload
+  return {
+    keyword,
+    sort,
+    filters,
+  }
+}
+
+export const defaultPayload = {
+  keyword: '',
+  sort: null,
+  filters: {
+    freeShipping: false,
+    isExists: false,
+    isReady: false,
+    hasDiscount: false,
+    namedTags: [],
+  },
 }
