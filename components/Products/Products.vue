@@ -81,8 +81,10 @@ export default {
           ...this.payload,
         })
           .then((response) => {
-            products = response.data.products
-            total = response.data.meta.count
+            if (response && response.data) {
+              products = response.data.products
+              total = response.data.meta.count
+            }
           })
           .finally(() => {
             this.loading = false
