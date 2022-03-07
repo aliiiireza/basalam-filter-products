@@ -37,7 +37,7 @@ export default {
     keyword: {
       immediate: true,
       handler() {
-        this.getNamedTags()
+        if (process.client) this.getNamedTags()
       },
     },
   },
