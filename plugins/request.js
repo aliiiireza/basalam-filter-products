@@ -14,7 +14,7 @@ export default function request(app, inject, headers) {
     crossdomain: true,
     withCredentials: false,
     cancelToken: source.token,
-    baseURL: '',
+    baseURL: process.server ? 'https://search.basalam.com/ai-engine' : '',
   }
 
   const accessToken = app.$cookies.get('accessToken')
