@@ -63,9 +63,6 @@ export default {
       },
     },
   },
-  created() {
-    this.$fetch()
-  },
   methods: {
     getProducts() {
       this.loading = true
